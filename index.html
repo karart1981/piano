@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playable piano in JS</title>
+    <link rel="shortcut icon" href="./image/keyMusic2.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="notes">
+        <div id="notes_child">
+           <img id="sign" src="./image/keyMusic2.png" width="120" height="200">
+        </div>
+        <div id="notes_child">
+            <div class="note"></div>
+            <div class="note"></div>
+            <div class="note"></div>
+            <div class="note"></div>
+            <div class="note"></div>
+        </div>
+        <div id="notes_child">
+            <img id="do" src="./image/note2.png" width="100px" height="70px">
+            <img id="re" src="./image/note.png" width="100px" height="70px">
+            <img id="mi" src="./image/note.png" width="100px" height="70px">
+            <img id="fa" src="./image/note.png" width="100px" height="70px">
+            <img id="sol" src="./image/note.png" width="100px" height="70px">
+            <img id="lya" src="./image/note.png" width="100px" height="70px">
+            <img id="si" src="./image/note.png" width="100px" height="70px">
+        </div>
+    </div>
     <div class="wrapper">
         <header>
             <h2>Yamaha</h2>
@@ -14,31 +36,60 @@
                 <span>Volume</span>
                 <input type="range" min="0" max="1" value="0.5" step="any">
             </div>
+            <div class="column note-btn">
+              <button id="putAnote">Put a Note</button>
+            </div>
             <div class="column keys-checkbox">
                 <span>Show Keys</span>
                 <input type="checkbox" checked>
             </div>
         </header>
         <ul class="piano-keys">
-            <li class="key white" data-key="a"><span>a</span></li>
-            <li class="key black" data-key="w"><span>w</span></li>
-            <li class="key white" data-key="s"><span>s</span></li>
-            <li class="key black" data-key="e"><span>e</span></li>
-            <li class="key white" data-key="d"><span>d</span></li>
-            <li class="key white" data-key="f"><span>f</span></li>
-            <li class="key black" data-key="t"><span>t</span></li>
-            <li class="key white" data-key="g"><span>g</span></li>
-            <li class="key black" data-key="y"><span>y</span></li>
-            <li class="key white" data-key="h"><span>h</span></li>
-            <li class="key black" data-key="u"><span>u</span></li>
-            <li class="key white" data-key="j"><span>j</span></li>
-            <li class="key white" data-key="k"><span>k</span></li>
-            <li class="key black" data-key="o"><span>o</span></li>
-            <li class="key white" data-key="l"><span>l</span></li>
-            <li class="key black" data-key="p"><span>p</span></li>
-            <li class="key white" data-key=";"><span>;</span></li>
+            <li class="key white" id="doNote" data-key="1"><span>1</span></li>
+            <li class="key black" data-key="s"><span>s</span></li>
+            <li class="key white" id="reNote" data-key="2"><span>2</span></li>
+            <li class="key black" data-key="d"><span>d</span></li>
+            <li class="key white" id="miNote" data-key="3"><span>3</span></li>
+            <li class="key white" id="faNote" data-key="4"><span>4</span></li>
+            <li class="key black" data-key="f"><span>f</span></li>
+
+            <li class="key white" id="solNote" data-key="5"><span>5</span></li>
+            <li class="key black" data-key="g"><span>g</span></li>
+            <li class="key white" id="lyaNote" data-key="6"><span>6</span></li>
+            <li class="key black" data-key="h"><span>h</span></li>
+            <li class="key white" id="siNote" data-key="7"><span>7</span></li>
+            <li class="key white" data-key="8"><span>8</span></li>
+            <li class="key black" data-key="j"><span>j</span></li>
+
+            <li class="key white" data-key="9"><span>9</span></li>
+            <li class="key black" data-key="k"><span>k</span></li>
+            <li class="key white" data-key="0"><span>0</span></li>
+            <li class="key white" data-key="q"><span>q</span></li>
+            <li class="key black" data-key="l"><span>l</span></li>
+
+            <li class="key white" data-key="w"><span>w</span></li>
+            <li class="key black" data-key="z"><span>z</span></li>
+            <li class="key white" data-key="e"><span>e</span></li>
+            <li class="key black" data-key="x"><span>x</span></li>
+            <li class="key white" data-key="r"><span>r</span></li>
+            <li class="key white" data-key="t"><span>t</span></li>
+            <li class="key black" data-key="c"><span>c</span></li>
+
+            <li class="key white" data-key="y"><span>y</span></li>
+            <li class="key black" data-key="v"><span>v</span></li>
+            <li class="key white" data-key="u"><span>u</span></li>
+            <li class="key white" data-key="i"><span>i</span></li>
+            <li class="key black" data-key="b"><span>b</span></li>
+
+            <li class="key black" data-key="n"><span>n</span></li>
+            <li class="key white" data-key="o"><span>o</span></li>
+            <li class="key black" data-key="m"><span>m</span></li>
+            <li class="key white" data-key="p"><span>p</span></li>
+            
         </ul>
+
     </div>
+    <script src="notes.js"></script>
     <script src="main.js" defer></script>
 </body>
 </html>

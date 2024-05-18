@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family:'Poppins',sans-serif;
 }
+
 body{
     display: flex;
     align-items: center;
@@ -14,42 +15,53 @@ body{
     padding:0 10px;
     background: #e3f2fd;
 }
+
 .wrapper{
     border-radius: 20px;
-    padding:35px 40px;
+    padding:30px 40px;
     background:#141414;
+    margin-top:180px;
 }
+
 .wrapper header{
     color:#b2b2b2;
     display: flex;
     align-items:center;
     justify-content: space-between;
 }
+
 header h2{
     font-size: 1.6rem;;
 }
+
 header .column{
     display: flex;
     align-items: center;
 }
+
 header .column span{
     font-weight: 500;
     margin-right: 15px;
     font-size: 1.19rem;
 }
+
 .volume-slider input{
     outline: none;
     accent-color: #fff;
+    cursor:pointer;
 }
+
 .keys-checkbox input{
     width:60px;
     height:30px;
+    outline: none;
     cursor:pointer;
     position: relative;
     appearance: none;
     border-radius:30px;
     background:#4b4b4b;
 }
+
 .keys-checkbox input::before{
     content:"";
     height:20px;
@@ -62,14 +74,17 @@ header .column span{
     transform: translateY(-50%);
     transition:all 0.3s ease;
 }
+
 .keys-checkbox input:checked::before{
    left:35px;
    background:#fff;
 }
+
 .piano-keys{
     display: flex;
     margin-top: 40px;
 }
+
 .piano-keys .key{
     cursor:pointer;
     list-style: none;
@@ -78,17 +93,20 @@ header .column span{
     text-transform: uppercase;
     user-select: none;
 }
+
 .piano-keys .white{
-   width:70px;
-   height:230px;
+   width:50px;
+   height:200px;
    border-radius:8px;
    border:1px solid #000;
    background:linear-gradient(#fff 96%, #eee 4%);
 }
+
 .piano-keys .white.active{
     box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
     background:linear-gradient(to bottom #fff 0%, #eee 100%);
 }
+
 .piano-keys .black{
    width:44px;
    height:140px;
@@ -97,10 +115,12 @@ header .column span{
    border-radius:0 0 5px 5px;
    background:linear-gradient(#333, #000);
 }
+
 .piano-keys .black.active{
     box-shadow: inset -5px 5px 10px rgba(255,255,255,0.1);
     background:linear-gradient(to bottom #000, #434343);
 }
+
 .piano-keys span{
     position: absolute;
     bottom:20px;
@@ -108,6 +128,7 @@ header .column span{
     font-size: 1.13rem;
     text-align: center;
 }
+
 .piano-keys .hide span{
     display: none;
 }
@@ -155,3 +176,126 @@ header .column span{
     }
 
 }
+
+
+
+#notes{
+    width:87%;
+    height:180px;
+    background:#141414;
+    border-radius:25px;
+    position:absolute;
+    top:0px;
+    left:80px;
+}
+#notes_child:nth-child(1) img{
+    position: absolute;
+    top:0px;
+    left:-100px;
+}
+
+.note:nth-child(1){
+    position:relative;
+    left:0px;
+    top:-20px;
+    width: 100%;
+    height: 50px;
+    border: 3px solid transparent;
+    border-bottom-color: #fff;
+}
+.note:nth-child(2){
+    position:relative;
+    left:0px;
+    top:-40px;
+    width: 100%;
+    height: 50px;
+    border: 3px solid transparent;
+    border-bottom-color: #fff;
+}
+.note:nth-child(3){
+    position:relative;
+    left:0px;
+    top:-60px;
+    width: 100%;
+    height: 50px;
+    border: 3px solid transparent;
+    border-bottom-color: #fff;
+}
+.note:nth-child(4){
+    position:relative;
+    left:0px;
+    top:-80px;
+    width: 100%;
+    height: 50px;
+    border: 3px solid transparent;
+    border-bottom-color: #fff;
+}
+.note:nth-child(5){
+    position:relative;
+    left:0px;
+    top:-100px;
+    width: 100%;
+    height: 50px;
+    border: 3px solid transparent;
+    border-bottom-color: #fff;
+}
+
+.note-btn button{
+    border:2px solid #B2B2B2;
+    background:transparent;
+    color:#B2B2B2;
+    padding:7px 15px;
+    border-radius:25px;
+    font-size: 1.19rem;
+    font-weight: 500;
+    cursor:pointer;
+    box-shadow:2px 2px 2px 2px #1c1c1c;
+    transition: all 0.5s ease;
+}
+.note-btn button:hover{
+    box-shadow:0px 0px 0px 0px #B2B2B2;
+}
+
+#do{
+  position:absolute;
+  top:110px;
+  left:0px;
+  display: none;
+}
+#re{
+    position:absolute;
+    top:102px;
+    left:100px;
+    display: none;
+}
+#mi{
+    position:absolute;
+    top:95px;
+    left:200px;
+    display: none;
+}
+#fa{
+    position:absolute;
+    top:80px;
+    left:300px;
+    display: none;
+}
+#sol{
+    position:absolute;
+    top:65px;
+    left:400px;
+    display: none;
+}
+#lya{
+    position:absolute;
+    top:50px;
+    left:500px;
+    display: none;
+}
+#si{
+    position:absolute;
+    top:35px;
+    left:600px;
+    display: none;
+}
+
