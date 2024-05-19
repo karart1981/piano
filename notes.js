@@ -1,3 +1,4 @@
+/* sound of notes */ 
 const doSound = new Audio("./tunes/1.wav");
 const reSound = new Audio("./tunes/2.wav");
 const miSound = new Audio("./tunes/3.wav");
@@ -8,6 +9,7 @@ const siSound = new Audio("./tunes/7.wav");
 const wrongSound = new Audio("./tunes/wrong.wav");
 const successSound = new Audio("./tunes/success.wav");
 
+/* id of header notes*/ 
 const doSign = document.querySelector("#do");
 const reSign = document.querySelector("#re");
 const miSign = document.querySelector("#mi");
@@ -17,7 +19,7 @@ const lyaSign = document.querySelector("#lya");
 const siSign = document.querySelector("#si");
 const piano = document.querySelectorAll(".piano-keys .key");
 
-
+/* id of piano notes*/ 
 const doNote = document.querySelector("#doNote")
 const reNote = document.querySelector("#reNote")
 const miNote = document.querySelector("#miNote")
@@ -27,6 +29,7 @@ const lyaNote = document.querySelector("#lyaNote")
 const siNote = document.querySelector("#siNote")
 const playBtn = document.querySelector("#putAnote")
 
+/* data of app*/ 
 let notes = [
     { note: doNote, key: "1", sound: doSound, sign: doSign },
     { note: reNote, key: "2", sound: reSound, sign: reSign },
@@ -37,12 +40,14 @@ let notes = [
     { note: siNote, key: "7", sound: siSound, sign: siSign },
 ]
 
+/* random number */
 function grn(start, end) {
     return start + Math.floor(Math.random() * (end - start))
 }
+
+/* event of btn*/
 let randomNote = []
 playBtn.addEventListener("click", ()=> {
-    
     notes.forEach(note => {
         note.sign.style.display = "none";
     });
@@ -52,10 +57,8 @@ playBtn.addEventListener("click", ()=> {
     notes[temp].sound.play();
     notes[temp].sign.style.display = "block";
     randomNote.push(notes[temp]);
-    console.log(randomNote);
 
     addEventListener("keydown",(e)=>{
-        console.log(e.key);
         if(randomNote.at(-1).key == e.key){
            document.body.style.background = "green";
            successSound.play();
@@ -73,23 +76,6 @@ playBtn.addEventListener("click", ()=> {
     })
     
 })
-
-
-    /*piano.addEventListener("keydown", (e) => {
-        })
-        /*if (e.key == notes[temp]) {
-            notes[temp].sound.play();
-            notes[temp].note.style.background = "green";
-        } else {
-            let found = notes.find(elm => elm.key == event.key)
-            if (found) {
-                found.sound.play();
-                found.note.style.background = "red"
-            } else {
-                found.sound.play()
-            }
-
-        }*/
       
     
 
